@@ -1,9 +1,13 @@
 .header {
-	background: url("http://s18.postimg.org/npewn5w15/header.jpg");
-	height: 650px;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+    /*background: url(".../images/header.jpg"); I don't know why it keeps
+    showing the wrong file path ahh! when I add it in inspector it is fine but when I save
+    the CSS it changes the path. HELP. I have reverted to hosting the image online
+    so that it works, but I do want to resolve it*/
+    background: url("http://s18.postimg.org/npewn5w15/header.jpg");
+    height: 650px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 body {
@@ -50,6 +54,7 @@ a {
 
 h1#homepage-header {
     font-size: 17px;
+    margin-top: -48px;
 }
 
 div#column-1 {
@@ -60,13 +65,13 @@ div#column-1 {
     padding-bottom: 40px;
 }
 
-/*div#column-2 {
+div#column-2 {
     width: 40%;
     display: inline-block;
     padding-right: 5%;
     float: right;
     padding-bottom: 40px;
-}  */  
+}    
 
 .button {
     width: 100%;
