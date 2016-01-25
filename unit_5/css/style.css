@@ -1,4 +1,4 @@
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, a {
     font-family: sans-serif;
 
 }
@@ -7,11 +7,7 @@ p {
     line-height: 1.5em;
 }
 
-.header {
-    /*background: url(".../images/header.jpg"); I don't know why it keeps
-    showing the wrong file path ahh! when I add it in inspector it is fine but when I save
-    the CSS it changes the path. HELP. I have reverted to hosting the image online
-    so that it works, but I do want to resolve it*/
+header {
     background: url("http://s18.postimg.org/npewn5w15/header.jpg");
     height: 650px;
     background-position: center;
@@ -23,7 +19,7 @@ body {
     margin: 0 auto;
 }
 
-.header-navigation-wrapper {
+nav#header-nav {
     width: 100%;
     float: left;
     padding-top: 10px;
@@ -45,7 +41,6 @@ li {
 a {
     text-decoration: none;
     color: #131212;
-    font-family: sans-serif;
     font-size: 11px;
     text-transform: uppercase;
     padding: 0 20px;
