@@ -48,7 +48,7 @@ li {
 a {
     text-decoration: none;
     color: #131212;
-    font-size: 11px;
+    font-size: .58em;
     text-transform: uppercase;
     padding: 0 2em;
     letter-spacing: .2em;
@@ -57,6 +57,11 @@ a {
 
 #my-work a {
     color: white;
+    font-size: .75em;
+}
+
+a:hover, #my-work a:hover {
+    color: #FFB7A7;
 }
 
 .hero-header {
@@ -215,6 +220,9 @@ div#pic-3 {
         margin: 0 auto;
         float: none;
     }
+    #my-work a {
+        font-size: .5em;
+    }
 
 
 }
@@ -229,6 +237,9 @@ div#pic-3 {
     }
         section#intro {
         padding: 1em;
+    }
+    a {
+        font-size: .5em;
     }
 
 }
