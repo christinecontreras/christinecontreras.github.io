@@ -40,6 +40,11 @@ li {
     display: inline;
 }
 
+.hero-header img {
+    width:45%;
+    display:inline;
+}
+
 a {
     text-decoration: none;
     color: #131212;
@@ -50,13 +55,16 @@ a {
     font-weight: bolder;
 }
 
+#my-work a {
+    color: white;
+}
+
 .hero-header {
     width: 800px;
     margin: 0 auto;
     text-align: center;
     color: white;
     font-family: sans-serif;
-    font-size: 17px;
     letter-spacing: 0.3em;
     padding-top: 20%;
     padding-right: 36%;
@@ -167,11 +175,20 @@ div#pic-3 {
     }
 
 }
+@media only screen and (max-width: 750px) {
+    .hero-header{
+        width: 100%;
+    }
+
+}
 
 @media only screen and (max-width: 650px) {
     header {
         width: 100%;
         height:50%;
+    }
+    nav#header-nav {
+        padding-top: .5em;
     }
 
 }
@@ -180,6 +197,9 @@ div#pic-3 {
     header {
         width: 100%;
         height:40%;
+    }
+    .hero-header img {
+        width:60%;
     }
 
 }
