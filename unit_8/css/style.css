@@ -159,11 +159,27 @@ div#pic-3 {
     padding-bottom: 18%;
 }
 
-}
 
 @media only screen and (max-width: 900px) {
     header {
-        width: 80%;
+        width: 100%;
+        height:70%;
+    }
+
+}
+
+@media only screen and (max-width: 650px) {
+    header {
+        width: 100%;
+        height:50%;
+    }
+
+}
+
+@media only screen and (max-width: 490px) {
+    header {
+        width: 100%;
+        height:40%;
     }
 
 }
