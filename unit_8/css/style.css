@@ -179,6 +179,10 @@ div#pic-3 {
     .hero-header{
         width: 100%;
     }
+    section#intro {
+        padding: 3em;
+    }
+
 
 }
 
@@ -200,6 +204,9 @@ div#pic-3 {
     }
     .hero-header img {
         width:60%;
+    }
+        section#intro {
+        padding: 1em;
     }
 
 }
