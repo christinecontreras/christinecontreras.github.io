@@ -182,6 +182,13 @@ div#pic-3 {
     section#intro {
         padding: 3em;
     }
+    div#pic-3 {
+        display:none;
+    }
+    div#pic-1, div#pic-2 {
+        width:50%;
+        padding:30% 0;
+    }
 
 
 }
@@ -194,6 +201,17 @@ div#pic-3 {
     nav#header-nav {
         padding-top: .5em;
     }
+        div#pic-2 {
+            display: none;
+        }
+        
+        div#pic-1 {
+        width: 400px;
+        padding: 30% 0;
+        margin: 0 auto;
+        float: none;
+    }
+
 
 }
 
