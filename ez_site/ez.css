@@ -331,6 +331,11 @@ input:hover {
   color: #fff;
 }
 
+input:active {
+  background: #000;
+  color: #fff;
+}
+
 textarea {
   width: 470px;
   max-width: 470px;
