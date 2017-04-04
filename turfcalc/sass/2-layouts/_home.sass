@@ -1,0 +1,59 @@
+/* HOME.SASS */
+#home-body
+  background: $blue
+  .navbar-default
+    .navbar-link, .navbar-nav>li>a
+      color: transparentize($dark-blue, 0.4)
+      &:visited, &:hover, &:active
+        color: $dark-blue
+    .navbar-toggle
+      border-color: transparentize($dark-blue, 0.4)
+      &:visited, &:hover, &:active
+        background: transparentize($dark-blue, 0.4)
+        .icon-bar
+          background: transparentize($blue, 0.5)
+      .icon-bar
+        background: transparentize($dark-blue, 0.4)
+    .navbar-collapse
+      border-color: transparentize($dark-blue, 0.4)
+      //media query
+      +tablet
+        &:hover, &:active
+          background: transparentize($dark-blue, 0.75)
+
+  header
+    background: transparentize($dark-blue, 0.75)
+  .page-header
+    h1
+      color: transparentize($dark-blue, 0.2)
+    small
+      color: transparentize($dark-blue, 0.2)
+  footer
+    background: transparentize($dark-blue, 0.75)
+    color: transparentize($dark-blue, 0.4)
+  .button
+    margin: 6rem auto 0
+    display: block
+    color: transparentize($dark-blue, 0.2)
+    border-color: transparentize($dark-blue, 0.2)
+    &:hover, &:active
+      border: transparentize($dark-blue, 0.5)
+      background: transparentize($dark-blue, 0.5)
+      color: transparentize(#fff, 0.2)
+      text-decoration: none
+
+
+
+.explain
+  padding: 20px
+  h2
+    text-align: center
+    padding-bottom: 15px
+    color: darken($dark-blue, 10%)
+    border-bottom: 2px solid darken($dark-blue, 10%)
+    font-size: 3rem
+    margin-bottom: 3rem
+  p, ol, h3
+    color: darken($dark-blue, 20%)
+  ol
+    font-weight: bold

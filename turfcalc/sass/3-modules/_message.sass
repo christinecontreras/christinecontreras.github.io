@@ -1,0 +1,76 @@
+/* MESSAGE.SASS */
+
+#finalMessage
+  // +flexbox
+  display: none
+  +flex-flow(column wrap)
+  +justify-content(space-around)
+  +align-items(center)
+  height: 40rem
+  width: 100%
+  margin: 5rem auto 2rem
+  background: transparentize($dark-green, 0.75)
+  border-radius: 5px
+  color: $dark-green
+  +desktop
+    height: auto
+    width: auto
+    padding: 10px
+
+  span
+    font-size: 5rem
+    font-weight: bolder
+    margin: 0 0.5rem
+    +desktop
+      font-size: 4rem
+    +mobile
+      font-size: 3rem
+
+.cost
+  +flexbox
+  +flex-flow(column wrap)
+  +justify-content(center)
+  +align-items(center)
+  height: auto
+  width: 95%
+  margin: auto
+  padding-bottom: 20px
+  border-bottom: 2px solid
+  p
+    font-size: 4rem
+    +desktop
+      font-size: 3rem
+    +tablet
+      font-size: 3.5rem
+    +mobile
+      font-size: 2.5rem
+
+.title
+  +flexbox
+  +justify-content(flex-start)
+  +align-items(center)
+  height: 10rem
+  width: 100%
+  p:nth-of-type(1)
+    width: 64%
+    +tablet
+      width: auto
+  p:nth-of-type(2)
+    font-size: 3rem
+    +desktop
+      font-size: 2rem
+  +tablet
+    +flex-flow(column nowrap)
+    +justify-content(space-around)
+    height: auto
+
+.savings
+  width: 95%
+  text-align: center
+  margin: auto
+  p
+    font-size: 3.5rem
+    +desktop
+      font-size: 2.5rem
+    +mobile
+      font-size: 2rem
