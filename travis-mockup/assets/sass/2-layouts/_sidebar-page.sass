@@ -1,0 +1,25 @@
+//CONTACT.SASS
+
+.main-content
+  +flexbox
+  +flex-flow(column nowrap)
+  width: 70%
+  +tablet
+    padding: 0
+    width: 100%
+
+.sidebar-layout
+  +flexbox
+  +flex-flow(row wrap)
+  +justify-content(space-between)
+  +tablet
+    +justify-content(center)
+
+.column__title
+  @extend %base-scale
+  color: $accent
+  padding: 0 0 10px
+  border-bottom: 2px solid
+  letter-spacing: 1px
+  text-align: center
+  margin: 0 0 1em

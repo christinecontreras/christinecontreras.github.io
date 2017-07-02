@@ -1,0 +1,102 @@
+//MUSIC.SASS
+
+.background--music
+  background-color: $primary
+
+.music-container
+  max-width: 800px
+  margin: 3em 0 2em
+  +desktop
+    width: 85%
+  +mobile
+    width: 90%
+
+//single albums
+.album-container
+  +flexbox
+  +justify-content(center)
+  +align-items(flex-start)
+  +flex-direction(column)
+  margin-bottom: 4em
+  +tablet
+    +align-items(center)
+
+.music__cover
+  +flexbox
+  +align-items(flex-end)
+  +flex-flow(row wrap)
+  width: 100%
+  padding-bottom: 1em
+  border-bottom: 2px solid transparentize($light, .75)
+  +tablet
+    +flex-direction(column)
+    +align-items(center)
+
+//new
+.album-wrapper
+  +flex(0 0 30%)
+  position: relative
+  +tablet
+    max-width: 400px
+
+.album__image
+  +flexbox
+  +align-items(center)
+  +hoverState
+    .album__overlay
+      opacity: 1
+
+.music__info
+  +flexbox
+  +align-items(flex-start)
+  +justify-content(flex-end)
+  +flex-flow(column wrap)
+  +flex(1 0 70%)
+  padding: 0 1em 1em
+  p
+    margin: 10px 0
+    color: transparentize($light, .25)
+    font-weight: $bold
+    font-size: 12px
+  +tablet
+    +align-items(center)
+
+.album__title
+  @extend %h4-scale
+  text-align: left
+  margin: 0
+  color: transparentize($light, .25)
+  +laptop-small
+    font-size: 1.75em
+  +tablet
+    text-align: center
+    padding-top: 1em
+
+.album__ctas
+  +flexbox
+  +justify-content(space-around)
+
+.music__tracks
+  width: 100%
+
+.music__playlist
+  color: transparentize($light, .25)
+  margin: 0
+  padding: 1em 0 0 50px
+
+.track
+  padding-bottom: 10px
+  +hoverState
+    cursor: pointer
+    .track__link, &::before, .track__time
+      color: lighten($accent, 30%)
+  &::before
+    font-family: $icon-font
+    content: '\f04b'
+    position: relative
+    right: 40px
+    padding-bottom: 4px
+    color: transparentize($light, .25)
+
+.track__time
+  float: right

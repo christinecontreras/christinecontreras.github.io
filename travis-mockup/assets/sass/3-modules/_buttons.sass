@@ -1,0 +1,152 @@
+//BUTTONS
+
+a.button
+  @extend %button
+  @extend %small-scale
+  padding: 10px
+  color: $accent
+  border: 1px solid $accent
+  min-width: 110px
+  +hoverState
+    cursor: pointer
+    background-color: $accent
+    border: 1px solid $accent
+    color: $light
+
+.button--header
+  @extend %button
+  background: transparent
+  color: $light
+  margin-top: 4px
+  padding: 15px 40px
+  border: 2px solid $light
+  letter-spacing: 2px
+  +hoverState
+    cursor: pointer
+    background: transparentize($light, .2)
+    color: $gray
+    border-color: transparentize($light, .8)
+
+//modal button in cta bar
+.button--modal
+  @extend %button
+  background: transparent
+  padding: 10px 25px
+  border: 1px solid $light
+  color: $light
+  .desktop-cta
+    display: inline-block
+  .mobile-cta
+    display: none
+  +hoverState
+    background: transparentize($light, .2)
+    color: $gray
+    border-color: transparentize($light, .8)
+    cursor: pointer
+  +mobile
+    .desktop-cta
+      display: none
+    .mobile-cta
+      display: inline-block
+
+.button--subscribe
+  @extend %button
+  @extend %base-scale
+  margin: 0.5em auto 1em
+  width: 100%
+  border: 1px solid lighten($accent, 20%)
+  color: lighten($accent, 20%)
+  background: none
+  padding: 14px
+  +hoverState
+    cursor: pointer
+    background: lighten($accent, 20%)
+    color: $primary
+
+aside .button--subscribe
+  border: none
+  background: lighten($gray, 70%)
+  color: $gray
+  +hoverState
+    background: lighten($gray, 60%)
+
+a.button--music
+  @extend %button
+  @extend %small-scale
+  border: none
+  float: right
+  padding: 8px 20px
+  color: $accent
+  border: 1px solid $accent
+  min-width: 120px
+  +hoverState
+    background: $accent
+    color: $primary
+
+.button--close
+  @extend %button
+  background: transparent
+  border: none
+  +align-self(flex-end)
+  padding: 0 10px 5px
+  +hoverState
+    cursor: pointer
+  span
+    font-size: 4em
+    color: $light
+    font-weight: $bold
+
+//post-load
+a.button--nav
+  @extend %button
+  @extend %small-scale
+  margin: 3em auto 1em
+  width: 150px
+  display: block
+  padding: 15px
+  border: 2px solid
+  +hoverState
+    cursor: pointer
+    color: $light
+    border: 2px solid $gray
+    background-color: $gray
+
+a.button--view
+  @extend %small-scale
+  @extend %overlay-cta
+  @extend %hover-link
+  +flexbox
+  +align-items(center)
+  padding: 5px 15px
+  border: 1px solid $accent
+  color: $accent
+  visibility: hidden
+  opacity: 0
+  position: relative
+  transition:  all .25s ease
+  +hoverState
+    background-color: $accent
+    color: $primary
+
+.button--contact
+  @extend %small-scale
+  @extend %button
+  padding: 15px
+  background: transparent
+  border-color: $gray
+  color: $gray
+  display: block
+  margin: auto
+  width: 150px
+  +hoverState
+    cursor: pointer
+    color: #fff
+    background: $gray
+
+.button--color
+  +prefix(animation, ColorChange 5s infinite cubic-bezier(0.250, 0.460, 0.450, 0.940), webkit moz)
+  font-size: 20px
+  position: relative
+  +hoverState
+    color: $light
+    top: 5px

@@ -1,0 +1,116 @@
+// COMMON.SASS
+
+html
+  font-size: $base-size
+  line-height: $base-line-height
+  box-sizing: border-box
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+*, *:before, *:after
+  box-sizing: inherit
+
+body
+  @extend %base-scale
+  margin: 0 auto
+  color: $gray
+  font-family: $primary-font
+
+p, ul, ol, dl
+  @extend %base-scale
+
+p
+  margin-bottom: 1.3em
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6
+  font-family: $secondary-font
+  text-transform: uppercase
+  font-weight: $bolder
+  color: transparentize($primary, .75)
+  +laptop-small
+    text-align: center
+
+h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, small
+  margin: 0.5em 0
+
+h1, .h1
+  @extend %h1-scale
+  +tablet
+    font-size: 2.5em
+
+.inner-container h1
+  &:nth-of-type(1)
+    margin: 0 0 1em
+
+h2, .h2
+  @extend %h2-scale
+  +tablet
+    font-size: 2.5em
+
+h3, .h3
+  @extend %h3-scale
+  +tablet
+    font-size: 2em
+
+h4, .h4
+  @extend %h4-scale
+  +tablet
+    font-size: 1.75em
+
+h5, .h5
+  @extend %h5-scale
+
+h6, .h6
+  @extend %h6-scale
+
+small
+  @extend %small-scale
+
+strong
+  font-weight: $bold
+
+em
+  font-style: italic
+
+ul, ol
+  margin: 10px 0 1em 20px
+
+blockquote
+  +flexbox
+  +flex-flow(column wrap)
+  margin: 1.5em
+  padding: 3em
+  border: 3px solid $gray
+  outline: 1px solid $light
+  outline-offset: -9px
+  background-color: $gray
+  color: $light
+  p
+    margin-bottom: 10px
+
+cite
+  display: block
+  text-transform: capitalize
+  font-style: italic
+  text-align: right
+  &::before
+    position: relative
+    content: ''
+    width: 5px
+    height: 1px
+    background: $light
+    vertical-align: middle
+    display: inline-block
+    margin-right: 5px
+
+.container
+  +flexbox
+  min-height: 100vh
+  +flex-direction(column)
+
+main
+  +flexbox
+  +flex-direction(column)
+  +justify-content(space-around)
+  +align-items(center)
+  // overflow: auto

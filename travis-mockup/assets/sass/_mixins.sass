@@ -1,0 +1,161 @@
+//MIXINS
+
+//queries
+$xsmall-screen: 580px
+$small-screen: 768px
+$small-medium-screen: 1000px
+$medium-screen: 1280px
+$large-screen: 1440px
+
+=desktop
+  @media (max-width: #{$large-screen})
+    @content
+
+=laptop
+  @media (max-width: #{$medium-screen})
+    @content
+
+=laptop-small
+  @media (max-width: #{$small-medium-screen})
+    @content
+
+=tablet
+  @media (max-width: #{$small-screen})
+    @content
+
+=mobile
+  @media (max-width: #{$xsmall-screen})
+    @content
+
+//hovers
+=hoverState
+  &:hover, &:active, &:focus
+    @content
+
+//keyframes
+=keyframes($animation)
+  @-webkit-keyframes #{$animation}
+    @content
+  @keyframes #{$animation}
+    @content
+
+=hoverLine
+  &:hover::after, &:active::after, &:focus::after
+    @content
+
+//prefixes
+=prefix($property, $value, $vendors: webkit moz ms o)
+  @if $vendors
+    @each $vendor in $vendors
+      #{"-" + $vendor + "-" + $property}: #{$value}
+  #{$property}: #{$value}
+
+//FLEX CONTAINER//
+
+// Flexbox display
+=flexbox()
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+
+// Inline-Flex display
+=inline-flexbox()
+  display: -webkit-inline-flex
+  display: -ms-inline-flexbox
+  display: inline-flex
+
+// Flex Flow Direction
+// - applies to: flex containers
+// row | row-reverse | column | column-reverse
+=flex-direction($direction)
+  -webkit-flex-direction: $direction
+  -ms-flex-direction: $direction
+  flex-direction: $direction
+
+// Flex Line Wrapping
+// - applies to: flex containers
+// nowrap | wrap | wrap-reverse
+=flex-wrap($wrap)
+  -ms-flex-wrap: $wrap
+  flex-wrap: $wrap
+
+// Flex Direction and Wrap
+// - applies to: flex containers
+// <flex-direction> || <flex-wrap>
+=flex-flow($flow)
+  -ms-flex-flow: $flow
+  flex-flow: $flow
+
+// Axis Alignment (Justify)
+// - applies to: flex containers
+// flex-start | flex-end | center | space-between | space-around
+=justify-content($justify)
+  -webkit-justify-content: $justify
+  -ms-flex-pack: $justify
+  justify-content: $justify
+
+
+// Cross-axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | baseline | stretch
+=align-items($align)
+  -webkit-box-align: $align
+  -ms-flex-align: $align
+  -ms-grid-row-align: $align
+  align-items: $align
+
+// Packing Flex Lines (spacing up and down)
+// - applies to: multi-line flex containers
+// flex-start | flex-end | center | space-between | space-around | stretch
+=align-content($align)
+  -ms-flex-inline-pack: $align
+  align-content: $align
+
+//FLEX ITEMS//
+
+// The 'flex' shorthand
+// - applies to: flex items
+//values= flex-grow, flex-shrink, initial width
+// <positive-number>, initial, auto, or none
+=flex($values)
+  -webkit-flex: $values
+  -ms-flex: $values
+  flex: $values
+
+// Display Order
+// - applies to: flex items
+// <integer>
+=order($val)
+  -webkit-box-ordinal-group: $val
+  -ms-flex-order: $val
+  order: $val
+
+// Flex grow factor
+// - applies to: flex items
+// <number>
+=flex-grow($grow)
+  -webkit-box-flex: $grow
+  -ms-flex-positive: $grow
+  flex-grow: $grow
+
+// Flex shrink
+// - applies to: flex item shrink factor
+// <number>
+=flex-shrink($shrink)
+  -ms-flex-negative: $shrink
+  flex-shrink: $shrink
+
+// Flex basis
+// - the initial main size of the flex item
+// - applies to: flex itemsnitial main size of the flex item
+// <width>
+=flex-basis($width)
+  -ms-flex-preferred-size: $width
+  flex-basis: $width
+
+// Cross-axis Alignment
+// - applies to: flex items
+// auto | flex-start | flex-end | center | baseline | stretch
+=align-self($align)
+  -ms-flex-item-align: $align
+  align-self: $align

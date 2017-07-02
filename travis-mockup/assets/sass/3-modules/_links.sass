@@ -1,0 +1,78 @@
+//LINKS.SASS
+
+.inner-container a, .two-columns a, .music-container a
+  @extend %link
+
+// a.excerpt__link
+//   @extend %hover-link
+//   width: 100%
+//   height: 100%
+//   +hoverState
+//     background-color: transparentize($primary, .2)
+//     .post__excerpt
+//       background-color: transparentize($primary, 0.75)
+//       text-shadow: none
+//       color: $light
+//     .excerpt__title
+//       color: $light
+//     .button--view
+//       +prefix(animation, buttonSlide 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, webkit)
+//       visibility: visible
+
+a.post__link
+  @extend %hover-link
+  font-weight: $regular
+  color: $highlight
+  // .fa
+  //   padding: 0 15px
+  //   +align-self(center)
+  +hoverState
+    opacity: 0.8
+  //   .post__previous, .post__next, .info__title
+  //     opacity: 0.8
+
+a.breadcrumbs__link
+  @extend %small-scale
+  font-weight: normal
+  border: none
+  padding: 0 10px
+  color: $primary
+  +hoverState
+    background-color: transparent
+    opacity: .5
+
+// a.event__link
+//   @extend %hover-link
+//   +flexbox
+//   +flex-flow(column nowrap)
+//   height: 100%
+//   width: 100%
+//   +hoverState
+//     .button--view
+//       +prefix(animation, buttonSlide 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, webkit)
+//       visibility: visible
+//     .event__info
+//       +prefix(animation, FadeInDown 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, webkit)
+
+a.album__link
+  @extend %hover-link
+  // @extend %overlay
+  // @extend %overlay-cta
+  // +flexbox
+  // +flex-flow(column wrap)
+  // +justify-content(center)
+  // +align-items(center)
+  // background-color: transparentize($accent, .1)
+  color: transparentize($light, 0.25)
+  // opacity: 0
+  // transition: opacity .4s
+  // +hoverState
+  //   .icon__cta
+  //     +prefix(animation, buttonSlide 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, webkit)
+
+a.track__link
+  border: none
+  font-weight: $regular
+  color: transparentize($light, .4)
+  +hoverState
+    background-color: transparent

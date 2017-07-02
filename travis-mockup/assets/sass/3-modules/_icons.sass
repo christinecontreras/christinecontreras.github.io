@@ -1,0 +1,93 @@
+//SOCIAL.SASS
+
+.social__icon
+  color: $light
+  margin: 0 10px 5px
+  text-decoration: none
+  +hoverState
+    color: transparentize($light, 0.5)
+
+.social__icon.social--inner
+  margin: 0 7px
+  border: 1px solid $gray
+  width: 40px
+  height: 40px
+  border-radius: 100%
+  font-size: 14px
+  +inline-flexbox
+  +justify-content(center)
+  +align-items(center)
+  +hoverState
+    color: $accent
+    background: $gray
+
+.icon.hover__icon
+  display: block
+  font-size: 3rem
+  // opacity: 0
+
+.icon__cta
+  opacity: 0
+
+.event__icon
+  +flexbox
+  +align-items(center)
+  padding-bottom: 8px
+  .icon
+    width: 1.5rem
+
+.icon
+  font-family: 'icomoon' !important
+  speak: none
+  font-style: normal
+  font-weight: normal
+  font-variant: normal
+  text-transform: none
+  line-height: 1
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+.icon-long-arrow-left, .icon-long-arrow-right
+  padding: 0 5px
+
+.icon-home:before
+  content: "\f015"
+
+.icon-clock-o:before
+  content: "\f017"
+
+.icon-map-marker:before
+  content: "\f041"
+
+.icon-play:before
+  content: "\f04b"
+
+.icon-chevron-right:before
+  content: "\f054"
+
+.icon-twitter:before
+  content: "\f099"
+
+.icon-facebook:before
+  content: "\f09a"
+
+.icon-facebook-f:before
+  content: "\f09a"
+
+.icon-building-o:before
+  content: "\f0f7"
+
+.icon-youtube-play:before
+  content: "\f16a"
+
+.icon-instagram:before
+  content: "\f16d"
+
+.icon-long-arrow-left:before
+  content: "\f177"
+
+.icon-long-arrow-right:before
+  content: "\f178"
+
+.icon-soundcloud:before
+  content: "\f1be"

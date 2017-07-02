@@ -1,0 +1,36 @@
+//TWO-COLUMNS.SASS
+
+.two-columns
+  +flexbox
+  width: 100%
+  +tablet
+    +flex-direction(column)
+    +align-items(center)
+
+.column-left, .column-right
+  +flex-basis(50%)
+  +laptop-small
+    +flex-basis(100%)
+    padding: 0
+
+.column-left
+  padding-right: 1rem
+  +tablet
+    padding: 0
+
+.column-right
+  padding-left: 1rem
+  +tablet
+    width: 100%
+    padding: 0
+
+.content-right
+  max-width: 600px
+  height: 550px
+  overflow-y: scroll
+  padding: 0 3em 3em 1em
+  +tablet
+    padding: 3em 0
+
+.content
+  // opacity: 0

@@ -1,0 +1,35 @@
+//BLOG.SASS
+
+.posts
+  +flexbox
+  +flex-flow(row wrap)
+  +justify-content(flex-start)
+
+.post__item
+  +flex(0 0 25%)
+  min-height: 300px
+  position: relative
+  &:nth-of-type(1), &:nth-of-type(10n), &:nth-of-type(11n)
+    +flex(1 0 50%)
+  +laptop-small
+    +flex(0 0 50%)
+    min-height: 300px
+    &:nth-of-type(1), &:nth-of-type(10n), &:nth-of-type(11n)
+      +flex(1 0 100%)
+  +mobile
+    +flex(0 0 100%)
+
+.post-wrapper
+  height: 100%
+  +hoverState
+    cursor: pointer
+    background-color: transparentize($primary, .2)
+    .post__excerpt
+      background-color: transparentize($primary, 0.75)
+      text-shadow: none
+      color: $light
+    .excerpt__title
+      color: $light
+    .button--view
+      +prefix(animation, buttonSlide 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, webkit)
+      visibility: visible

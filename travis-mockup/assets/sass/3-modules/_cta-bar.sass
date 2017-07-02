@@ -1,0 +1,19 @@
+/* CTA-BAR.SASS */
+
+#cta-bar
+  background: $gray
+  padding: 15px
+  text-align: center
+  border-top: 1px solid transparentize($light, 0.5)
+  border-bottom: 1px solid transparentize($light, 0.5)
+  +flexbox
+  +align-items(center)
+  +justify-content(center)
+  &.bar--clear
+    background: none
+
+.cta__content
+  color: $light
+  margin: 0 2em 0 0
+  +mobile
+    display: none

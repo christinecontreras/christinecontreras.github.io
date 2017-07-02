@@ -1,0 +1,97 @@
+//MODAL SASS
+
+//body blur
+.modal-open
+	+prefix(transform, scale(1.02), webkit moz)
+	+prefix(animation, blurBackground 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, webkit)
+	background-color: transparentize($primary, 0.6)
+
+//whole modal
+.modal
+	height: 100%
+	width: 100%
+	position: fixed
+	z-index: 10
+	top: 0
+
+.modal__container
+	+flexbox
+	+flex-direction(column)
+	+justify-content(space-between)
+	+align-items(center)
+	position: relative
+	top: 10%
+	width: 500px
+	margin: auto
+	height: auto
+	background: $gray
+	padding: 1em 2em 2em
+	border-radius: 2px
+	box-shadow: -5px 6px 24px transparentize($primary, 0.5)
+	color: $light
+	+tablet
+		width: 90%
+		max-width: 450px
+	+mobile
+		padding: 1em 1.5em
+
+.modal__header
+	width: 100%
+	+flexbox
+	+flex-flow(column nowrap)
+	+justify-content(space-between)
+	+align-items(center)
+	text-transform: uppercase
+	text-align: center
+
+.modal__subhead
+	color: $accent
+
+.modal__title
+	@extend h3
+	color: transparentize($light, 0.25)
+	margin: 0
+	+tablet
+		font-size: 2.25em
+	+mobile
+		font-size: 1.5em
+
+.modal__body
+	width: 100%
+
+.modal__form
+	width: 100%
+	padding-top: 1em
+
+.modal__group
+	width: 100%
+	position: relative
+	bottom: 1em
+
+.modal__label
+	@extend %small-scale
+	visibility: hidden
+	position: relative
+	top: 36px
+	left: 10px
+	width: 100%
+	color: lighten($gray, 20%)
+	transition: visiblity 0.25s ease
+
+.js-visible .modal__label
+	visibility: visible
+	transition: visiblity 0.25s ease
+
+.modal__input
+	@extend %input
+	padding: 16px
+	color: lighten($gray, 20%)
+	border-color: lighten($gray, 20%)
+	+hoverState
+		outline: none
+
+.modal__footer
+	+flexbox
+	+flex-direction(column)
+	padding-top: 0.5em
+	text-align: center
