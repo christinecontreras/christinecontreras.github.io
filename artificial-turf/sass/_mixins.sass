@@ -1,0 +1,121 @@
+//MIXINS
+
+//queries
+$large-width: 1500px
+$desktop-width: 1000px
+$tablet-width: 768px
+$mobile-width: 630px
+
+=large-screen
+  @media (max-width: #{$large-width})
+    @content
+
+=desktop
+  @media (max-width: #{$desktop-width})
+    @content
+
+=tablet
+  @media (max-width: #{$tablet-width})
+    @content
+
+=mobile
+  @media (max-width: #{$mobile-width})
+    @content
+
+//FLEX CONTAINER//
+
+// Flexbox display
+@mixin flexbox()
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+
+// Flex Flow Direction
+@mixin flex-direction($direction)
+  -webkit-flex-direction: $direction
+  -moz-flex-direction: $direction
+  -ms-flex-direction: $direction
+  flex-direction: $direction
+
+// Flex Line Wrapping
+@mixin flex-wrap($wrap)
+  -webkit-flex-wrap: $wrap
+  -moz-flex-wrap: $wrap
+  -ms-flex-wrap: $wrap
+  flex-wrap: $wrap
+
+// Flex Direction and Wrap
+@mixin flex-flow($flow)
+  -webkit-flex-flow: $flow
+  -moz-flex-flow: $flow
+  -ms-flex-flow: $flow
+  flex-flow: $flow
+
+// Axis Alignment (Justify)
+@mixin justify-content($justify)
+  -webkit-justify-content: $justify
+  -moz-justify-content: $justify
+  -ms-justify-content: $justify
+  justify-content: $justify
+  -ms-flex-pack: $justify
+
+// Cross-axis Alignment
+@mixin align-items($align)
+  -webkit-align-items: $align
+  -moz-align-items: $align
+  -ms-align-items: $align
+  align-items: $align
+
+// Packing Flex Lines
+@mixin align-content($align)
+  -webkit-align-content: $align
+  -moz-align-content: $align
+  -ms-align-content: $align
+  align-content: $align
+
+//FLEX ITEMS//
+@mixin flex($values)
+  -webkit-box-flex: $values
+  -moz-box-flex: $values
+  -webkit-flex: $values
+  -ms-flex: $values
+  flex: $values
+
+// Display Order
+@mixin order($val)
+  -webkit-box-ordinal-group: $val
+  -moz-box-ordinal-group: $val
+  -ms-flex-order: $val
+  -webkit-order: $val
+  order: $val
+
+// Flex grow factor
+@mixin flex-grow($grow)
+  -webkit-flex-grow: $grow
+  -moz-flex-grow: $grow
+  -ms-flex-grow: $grow
+  flex-grow: $grow
+
+// Flex shrink
+@mixin flex-shrink($shrink)
+  -webkit-flex-shrink: $shrink
+  -moz-flex-shrink: $shrink
+  -ms-flex-shrink: $shrink
+  flex-shrink: $shrink
+
+// Flex basis
+@mixin flex-basis($width)
+  -webkit-flex-basis: $width
+  -moz-flex-basis: $width
+  -ms-flex-basis: $width
+  flex-basis: $width
+
+
+// Cross-axis Alignment
+@mixin align-self($align)
+  -webkit-align-self: $align
+  -moz-align-self: $align
+  -ms-align-self: $align
+  align-self: $align
