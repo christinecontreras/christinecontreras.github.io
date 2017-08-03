@@ -1,2 +1,2 @@
 # christinecontreras.github.io
-# DCI Projects
+DCI Projects
