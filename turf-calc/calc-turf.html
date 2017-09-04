@@ -3,154 +3,152 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Turf Calculator | Christine Contreras">
-    <meta name="author" content="Christine Contreras">
-    <!--favicon link-->
-    <link rel="icon" href="img/c.ico">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Turf Calculator | Christine Contreras">
+  <meta name="author" content="Christine Contreras">
+  <!--favicon link-->
+  <link rel="icon" href="img/c.ico">
 
-    <title>Artificial Turf Calculator | April Project</title>
+  <title>Artificial Turf Calculator | Project</title>
 
-    <!--normalize CSS-->
-    <link href="css/normalize.css" rel="stylesheet">
-    <!-- Bootstrap -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!--custom styles-->
-    <link href="css/app/app.css" rel="stylesheet">
+  <!--normalize CSS-->
+  <link href="css/normalize.css" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!--custom styles-->
+  <link href="css/app/app.css" rel="stylesheet">
 
-    <!--[if lt IE 9]>
+  <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
 
 <body id="calc-body">
-    <header>
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+  <header>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                    <a class="navbar-brand navbar-link" href="#">CHRISTINE</a>
-                </div>
-                <div class="collapse navbar-collapse" id="navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li role="presentation"><a href="index.html">&larr; back</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <div class="page-header">
-            <h1>Artificial Grass
+        </div>
+      </div>
+    </nav>
+    <div class="page-header">
+      <h1>Artificial Grass
                     <small>Find Out How Much You Could Save</small>
                 </h1>
+    </div>
+  </header>
+  <div class="container">
+    <section class="calculator">
+      <p>Find out how much your lawn would cost to install artificial turf. <br /><em>*This is only a vague estimate. Contact us for an accurate estimate.</em></p>
+      <!-- <form id="calc-form" autocomplete="off" method="post"> -->
+      <h3 class="sr-only">Artificial Turf Calculator</h3>
+      <div class="calculator-form">
+        <div id="calc-alert" class="alert" role="alert">
+          <!-- alerts go here -->
         </div>
-    </header>
-    <div class="container">
-        <section class="calculator">
-            <p>Find out how much your lawn would cost to install artificial turf. <br /><em>*This is only a vague estimate. Contact us for an accurate estimate.</em></p>
-            <!-- <form id="calc-form" autocomplete="off" method="post"> -->
-            <h3 class="sr-only">Artificial Turf Calculator</h3>
-            <div class="calculator-form">
-                    <div id ="calc-alert" class="alert" role="alert">
-                    <!-- alerts go here -->
+        <div id="questions">
+          <div class="form-group" id="q1">
+            <label for="q1">How big is the area?</label>
+            <div class="input-group">
+              <input class="form-control num invalid" type="text" id="q1" placeholder="1000">
+              <div class="input-group-addon">sqft.</div>
             </div>
-            <div id="questions">
-            <div class="form-group" id="q1">
-                <label for="q1">How big is the area?</label>
-                <div class="input-group">
-                    <input class="form-control num invalid" type="text" id="q1" placeholder="1000">
-                    <div class="input-group-addon">sqft.</div>
-                </div>
-            </div>
+          </div>
 
-            <div class="form-group" id="q2">
-                <label for="q2">How often do you water the yard?</label>
-                <div class="input-group">
-                    <input class="form-control num invalid" type="text" id="q2" placeholder="2">
-                    <div class="input-group-addon">/ month</div>
-                </div>
+          <div class="form-group" id="q2">
+            <label for="q2">How often do you water the yard?</label>
+            <div class="input-group">
+              <input class="form-control num invalid" type="text" id="q2" placeholder="2">
+              <div class="input-group-addon">/ month</div>
             </div>
+          </div>
 
-            <div class="form-group" id="q3">
-                <label for="q3">How many times do you fertilize?</label>
-                <div class="input-group">
-                    <input class="form-control num invalid" type="text" id="q3" placeholder="2">
-                    <div class="input-group-addon">/ year</div>
-                </div>
+          <div class="form-group" id="q3">
+            <label for="q3">How many times do you fertilize?</label>
+            <div class="input-group">
+              <input class="form-control num invalid" type="text" id="q3" placeholder="2">
+              <div class="input-group-addon">/ year</div>
             </div>
+          </div>
 
-            <div class="form-group" id="q4">
-                <label for="q4">How many times do you use weed killers?</label>
-                <div class="input-group">
-                    <input class="form-control num invalid" type="text" id="q4" placeholder="2">
-                    <div class="input-group-addon">/ year</div>
-                </div>
+          <div class="form-group" id="q4">
+            <label for="q4">How many times do you use weed killers?</label>
+            <div class="input-group">
+              <input class="form-control num invalid" type="text" id="q4" placeholder="2">
+              <div class="input-group-addon">/ year</div>
             </div>
+          </div>
 
-            <div class="form-group" id="q5">
-                <label for="q5">Do you have an irrigation system?</label>
-                <input class="form-control invalid" type="text" id="q5" placeholder="yes / no">
-            </div>
+          <div class="form-group" id="q5">
+            <label for="q5">Do you have an irrigation system?</label>
+            <input class="form-control invalid" type="text" id="q5" placeholder="yes / no">
+          </div>
 
-            <div class="form-group" id="q6">
-                <label for="q6">If you have a gardener how much do you pay?</label>
-                <div class="input-group">
-                    <div class="input-group-addon">$</div>
-                    <input class="form-control num invalid" type="text" id="q6" placeholder="0.00">
-                    <div class="input-group-addon">/ month</div>
-                </div>
+          <div class="form-group" id="q6">
+            <label for="q6">If you have a gardener how much do you pay?</label>
+            <div class="input-group">
+              <div class="input-group-addon">$</div>
+              <input class="form-control num invalid" type="text" id="q6" placeholder="0.00">
+              <div class="input-group-addon">/ month</div>
             </div>
+          </div>
 
-            <div class="form-group" id="q7">
-                <label for="q7">How much time do you spend on any lawn maintenance?</label>
-                <div class="input-group">
-                    <input class="form-control num invalid" type="text" id="q7" placeholder="5">
-                    <div class="input-group-addon">hrs / month</div>
-                </div>
+          <div class="form-group" id="q7">
+            <label for="q7">How much time do you spend on any lawn maintenance?</label>
+            <div class="input-group">
+              <input class="form-control num invalid" type="text" id="q7" placeholder="5">
+              <div class="input-group-addon">hrs / month</div>
             </div>
-        </div><!-- #questions -->
-          <button class="btn btn-lg" id="next">Find Out</button>
-          </div><!-- .calculator-form -->
-          <div id="finalMessage">
-            <!-- message goes here after submit -->
-            <div class="cost">
-                <div class="title">
-                    <p>Lawn Maintenance Cost:</p>
-                    <p>&dollar;<span>1,152.00</span> /yr.</p>
-                </div>
-                <div class="title">
-                    <p>Turf Estimate:</p>
-                    <p>&dollar;<span>1,000.00</span> </p>
-                </div>
-            </div>
-            <div class="savings">
-                <p>
-                    That means after <span>8 years</span> you never have to pay for your lawn again!
-                </p>
-            </div>
+          </div>
+        </div>
+        <!-- #questions -->
+        <button class="btn btn-lg" id="next">Find Out</button>
+      </div>
+      <!-- .calculator-form -->
+      <div id="finalMessage">
+        <!-- message goes here after submit -->
+        <div class="cost">
+          <div class="title">
+            <p>Lawn Maintenance Cost:</p>
+            <p>&dollar;<span>1,152.00</span> /yr.</p>
+          </div>
+          <div class="title">
+            <p>Turf Estimate:</p>
+            <p>&dollar;<span>1,000.00</span> </p>
+          </div>
+        </div>
+        <div class="savings">
+          <p>
+            That means after <span>8 years</span> you never have to pay for your lawn again!
+          </p>
+        </div>
 
-        </div><!-- #finalMessage -->
-        </section>
-        </div><!-- .container-fluid -->
-        <footer>
-            <p>&copy; 2017 Christine Contreras</p>
-        </footer>
+      </div>
+      <!-- #finalMessage -->
+    </section>
+  </div>
+  <!-- .container-fluid -->
+  <footer>
+    <p>&copy; 2017 Christine Contreras</p>
+  </footer>
 
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/app.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="js/app.js"></script>
 </body>
 
 </html>
